@@ -5,4 +5,4 @@ Haku termiin voi kirjoittaa langan tai värin nimen jonka jälkeen 'HAE LANKOJA'
 ## Mitä opin
 Sivua tehdessä opin luomaan REST APIn, joka palauttaa JSON muotoista dataa, JavaScriptilla opin muokkaamaan JSON objectin JS objectiksi ja objectien tulostamisen tableen.
 ## Käytetyt kielet
-Sivu on tehty HTML+CSS(bootsrap), JavaScript REST API on toteutettu PHP:lla
+Sivu on tehty HTML+CSS(bootsrap), JavaScript, REST API on toteutettu PHP:lla
