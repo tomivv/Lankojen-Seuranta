@@ -25,8 +25,6 @@
 	     		'Paino'=> (int)test_input($_POST['paino'])
 		);
 
-		//print_r( substr ($formdata['Vari'], 0, 1 ));
-
 		if ( substr ($formdata['Vari'], strlen($formdata['Vari']) - 1, 1 ) == " " || substr ($formdata['Lanka'], strlen($formdata['Lanka']) - 1, 1 ) == " ") {
 			header("Location: save.php?err");
 			exit();
