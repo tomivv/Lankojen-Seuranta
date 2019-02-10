@@ -5,7 +5,7 @@
 	<head>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="js/main.js"></script>
-	<title>LankaNettiSivuSovellus</title>
+	<title>Lankojen Seuranta</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
