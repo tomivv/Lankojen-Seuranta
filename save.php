@@ -13,8 +13,11 @@
 	<div style="margin: 2% 30% 0px 30%;">
 		<?php
 		if (isset($_GET['err'])) {
-			echo "Virhe tallentaessa: Ylimääräisiä välilyöntejä.";
-		}elseif (isset($_GET['done'])) {
+			echo "Virhe tallentaessa: Lanka tai väri ei voi alkaa tai loppua välilyöntiin";
+		}elseif (isset($_GET['empty'])) {
+			echo "Virhe tallentaessa: kaikki tiedot pitää täyttää!";
+		}
+		elseif (isset($_GET['done'])) {
 			echo "Tiedot tallennettu!";
 		}
 		?>
@@ -36,12 +39,12 @@
 				<input type="number" name="paino" class="form-control">
 			</div>
 				<input type="submit" value="submit" class="btn btn-primary">
-				<input type="submit" value="reset" class="btn" onclick="document.getElementById('formi').reset();">
+				<input type="reset" value="reset" class="btn">
 		</form>
 	</div>
 	<div>
 		<?php 
-			if ( $_GET['virhe'] ) {
+			if ( isset($_GET['virhe'] ) ) {
 				echo "virhe tallentaessa. kokeile uudelleen!";
 			}
 		?>

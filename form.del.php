@@ -7,14 +7,27 @@
 	
 	$data = json_decode($json, true);
 
-	if ( isset( $_POST ) ) {
+	function test_input($data) {
+  		$data = trim($data);
+  		$data = stripslashes($data);
+  		$data = htmlspecialchars($data);
+  		return $data;
+	}
 
+	if ( $_SERVER["REQUEST_METHOD"] == "POST") {
 		$formdata = array(
-	      'Lanka'=> $_POST['lanka'],
-	      'Vari'=> $_POST['vari'],
-	      'Varikoodi'=> (int)$_POST['vkoodi'],
-	      'Paino'=> (int)$_POST['paino']
-	   );
+			'Lanka'=> test_input($_POST['lanka']),
+			'Vari'=> test_input($_POST['vari']),
+			'Varikoodi'=> (int)test_input($_POST['vkoodi']),
+			'Paino'=> (int)test_input($_POST['paino'])
+	  	);
+
+	  	foreach ($formdata as $key => $value) {
+	   		if ($value == "") {
+	   			header("Location: poista.php?empty");
+				exit();
+			}
+		}
 
 		if ($_POST['kokopoisto']) {
 			foreach ($data as $key => $value) {
@@ -41,6 +54,6 @@
 		
 	}
 
-	header("Location: poista.php");
+	header("Location: poista.php?done");
 	exit();
 ?>

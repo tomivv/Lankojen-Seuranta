@@ -12,6 +12,14 @@
 	</div>
 
 	<div style="margin: 2% 30% 0px 30%;">
+		<?php
+			if (isset($_GET['empty'])) {
+				echo "Virhe poistaessa: kaikki tiedot pitää täyttää!";
+			}
+			elseif (isset($_GET['done'])) {
+				echo "Tiedot poistettu!";
+			}
+		?>
 		<form action="form.del.php" method="POST" id="formi">
 			<div class="form-group">
 				<label for="lanka">Lanka:</label> 
