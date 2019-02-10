@@ -9,8 +9,6 @@
 			document.getElementById('tuloste').innerHTML += "<thead>" + "<tr> <th>Lanka" + "</th> <th>Väri" + "</th> <th>Värikoodi" + "</th> <th>Paino" + "</th> </tr>" + "</thead>";
 	    	
 	    	var r = JSON.parse(this.responseText);
-
-	   		//console.log(r);
 	   		
 			if (r.length == 0) {
 				document.getElementById('tuloste').innerHTML += "<h4> Ei Tuloksia </h4>";
@@ -42,22 +40,22 @@
 	xhttp.send();
 };
 
-document.onreadystatechange = function () {
-    if (document.readyState == "interactive") {
-       if (window.location.href == "https://c2a26ecx.c2.suncomet.fi/Demo/Lankojen_Seurantaindex.php") {
+window.onload = function () {
+    if (document.readyState == "complete") {
+       if (window.location.href == "http://localhost/Lankojen_Seuranta/") {
        		button();
        }
     }
 }
 
 function save(){
-	window.location.href = "https://c2a26ecx.c2.suncomet.fi/Demo/Lankojen_Seuranta/save.php";
+	window.location.href = "http://localhost/Lankojen_Seuranta//save.php";
 };
 
 function del(){
-	window.location.href = "https://c2a26ecx.c2.suncomet.fi/Demo/Lankojen_Seuranta/poista.php";
+	window.location.href = "http://localhost/Lankojen_Seuranta/poista.php";
 };
 
 function index(){
-	window.location.href = "https://c2a26ecx.c2.suncomet.fi/Demo/Lankojen_Seuranta/";
+	window.location.href = "http://localhost/Lankojen_Seuranta/";
 };
